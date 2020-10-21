@@ -94,12 +94,14 @@ Shine은 기존에 존재하지 않는 인터페이스를 정의합니다. Plum�
 
 빛(Shine)과 열매(Plum)만 있다고 해서 열매에 빛이 나지 않습니다. 열매에 빛을 넣어준 상태가 바로 ShinePlum입니다. ShinePlum을 TuenOn하면 실제로 Web Server가 동작하며 Shine을 통해 Plum을 조작할 수 있습니다.
 
-## Why It's Important?
+## Why Las made this project?
 
 버즈빌에서는 클린 아키텍처를 사용해서 MicroService를 구현하고 있습니다. 그 과정에서 API는 gRPC를 사용하고 있습니다. 그러나 gRPC는 HTTP에 비하여는 클라이언트가 불편하고 정리가 잘 되지 않는 점이 있습니다.
 또한 웹서버가 아니다보니 System Operation을 위한 API를 어디선가 따로 구현할 필요가 있습니다.
 
 ShinePlum을 이용하면 이러한 Web Admin API Tool을 자동으로 만들어줍니다. 또한 추후에 제공될 기능으로 UseCase객체에 대한 example과 자세한 설명들을 통해서 gRPC가 아닌 API를 쉽게 보낼 수 있습니다.
+PostMan이나 OpenAPI형식으로 api에 대한 내용을 공유하기도 편하고 직접 frontend를 만들 수 있어 더 좋은 유저경험을 만들 수도 있습니다.
+굳이 PostMan이나 웹페이지가 아니더라도 kiki나 slack command로 바로 요청을 보낼 수 있다는 것도 큰 장점입니다.
 
 ## LICENSE
 
