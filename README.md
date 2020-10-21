@@ -32,8 +32,11 @@ func main() {
 }
 ```
 
+HTTP 요청을 보내서 Method를 호출하거나 설명을 볼 수 있습니다. 현재는`HOST/<UseCaseName>/<MethodName>` 이런 패턴만 지원하며, 여러 UseCase가 있어도 작동합니다.
+Get Method는 메서드에 대한 설명을 볼 수 있습니다. 이 설명은 Method의 주석에서 GoDoc과 같은 형식으로 가져옵니다. 추후에는 Example이나 파라미터에 대한 설명도 제공할 예정입니다.
 ```
 GET: localhost:8080/UseCase/GetAd
+
 
 Response
 > {
@@ -85,6 +88,7 @@ Plum은 UseCase를 감싼 General한 Golang Object입니다. 맛있는 자두와
 ### Shine
 
 Shine은 기존에 존재하지 않는 인터페이스를 정의합니다. Plum을 웹 API로 연결시켜주는 역할을 합니다. Plum을 어떻게 Web API를 통해 사용할 것인지 정의하고 있습니다.
+굳이 WebAPI에 국한되지 않고 swagger형식대로 문서를 만드는 것과 같이 새로운 외부와의 interaction을 정의합니다. 단순히 API뿐만 아니라 FrontEnd작업이 있을 때, 1차적으로 Shine과 상호작용하게 됩니다. 
 
 ### ShinePlum
 
