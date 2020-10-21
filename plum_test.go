@@ -77,7 +77,6 @@ func TestPlum_ExecuteSimpleMethod(t *testing.T) {
 	assert.Equal(t, string(bs), result.JSON)
 }
 
-
 func TestPlum_ExecuteMethod(t *testing.T) {
 	u := &UseCase{}
 	ad := u.ListAd(&ListAdCommand{})

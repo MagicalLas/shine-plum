@@ -4,8 +4,74 @@ Web-UI for Golang Clean Architecture
 
 ## How To Use
 
+### Install
+
 ```
-go get github.com/MagicalLas/shine-plum
+go get github.com/MagicalLas/shine-plum@latest
+```
+
+### Usage
+
+```go
+package main
+
+import (
+	shine_plum "github.com/MagicalLas/shine-plum"
+	"github.com/MagicalLas/shine-plum/internal/example"
+)
+
+func main() {
+	shine := shine_plum.NewShine()
+    u := &example.UseCase{} // Using Your UseCase or Application Service Struct
+	plum := shine_plum.NewPlum(u)
+
+	sp := shine_plum.Bright(plum, shine)
+
+	<-sp.TurnOn()
+    // Wait during web server execute.
+}
+```
+
+```
+GET: localhost:8080/UseCase/GetAd
+
+Response
+> {
+>    "Description": "GetAd is get ad.",
+>    "UseCase": "GetAd"
+>  }
+
+POST: localhost:8080/UseCase/ListAd
+body:
+{
+    "command": {
+        "LineitemID": "l",
+        "ADNID: 1,
+        "UnitID": 2,
+        "User": {
+            "IFA": "asd",
+            "IP":  "ww"
+        }
+    }
+}
+
+Response
+> [
+>   {
+>      "Title":"tt",
+>      "Description":"dd",
+>      "Creatives":[
+>         {
+>            "Image":"http://magical.dev",
+>            "Icon":""
+>         },
+>         {
+>            "Image":"",
+>            "Icon":"http://magical.dev"
+>         }
+>      ]
+>   }
+> ]
 ```
 
 ## 설계 테마
